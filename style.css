@@ -1965,3 +1965,105 @@ a:hover,
   color: var(--accent, #a855f7);
   filter: drop-shadow(0 6px 18px rgba(var(--accent-rgb,168,85,247), .35));
 }
+
+
+
+/* 📱 Mobile-Friendly Fixes */
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(var(--color-slate-900-rgb), 0.98);
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Hero Section */
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .hero-avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* About Section */
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Skills Section */
+  .skills-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects Section */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    margin: 0 10px;
+  }
+
+  /* Education Section */
+  .education-timeline {
+    padding-left: 0;
+  }
+
+  /* Contact Section */
+  .contact-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info, .contact-form {
+    width: 100%;
+  }
+
+  /* General */
+  section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+

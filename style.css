@@ -2067,3 +2067,195 @@ a:hover,
   }
 }
 
+/*Mobile view Try1*/
+/* 🌎 RESET + BASE STYLE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0d1117;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* 🧭 NAVBAR */
+nav {
+  background: #161b22;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo a {
+  color: #58a6ff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu a {
+  color: #c9d1d9;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #58a6ff;
+}
+
+/* 📸 HERO SECTION */
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  color: #58a6ff;
+}
+
+#hero p {
+  margin-top: 1rem;
+  color: #8b949e;
+  font-size: 1.2rem;
+}
+
+/* 🧍 ABOUT SECTION */
+#about {
+  padding: 4rem 10%;
+  background-color: #0d1117;
+  text-align: center;
+}
+
+#about h2 {
+  color: #58a6ff;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  color: #c9d1d9;
+  font-size: 1rem;
+}
+
+/* 💼 PROJECTS */
+#projects {
+  padding: 4rem 10%;
+  background: #161b22;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #0d1117;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✉️ CONTACT SECTION */
+#contact {
+  background: #0d1117;
+  text-align: center;
+  padding: 3rem 10%;
+}
+
+#contact h2 {
+  color: #58a6ff;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  color: #c9d1d9;
+}
+
+button {
+  background: #58a6ff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1f6feb;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  #hero {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  #about, #projects, #contact {
+    padding: 2rem 5%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 🔹 Extra small screens (phones under 480px) */
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

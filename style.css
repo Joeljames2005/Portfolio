@@ -2023,63 +2023,73 @@ a:hover,
 
   /* 🧍 About Section (Improved Mobile Layout) */
   .about-content {
-    .about-content {
-    display: flex;
+     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px 10px; /* Reduced padding for tighter mobile spacing */
-    gap: 16px;
+    padding: 20px 10px;
+    gap: 14px;
   }
 
+  /* Headings */
   #about h2 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-  }
-
-  #about h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 6px;
   }
 
-  .about-text {
-    max-width: 92%;
-    font-size: 0.88rem;
+  #about h3,
+  .about-content h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    color: #e6e6e6;
+  }
+
+  /* Paragraph */
+  .about-text,
+  #about p {
+    font-size: 0.85rem;
     line-height: 1.5;
     color: #c9d1d9;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: justify;
   }
 
+  /* Stat boxes */
   .about-stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 10px;
     width: 100%;
-    margin-top: 8px;
-  }
-
-  .about-stats .stat {
-    width: 85%; /* More compact, fits within mobile width */
-    max-width: 220px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 10px 12px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  /* If you have any icon or circular image */
-  .about-icon {
-    width: 60px;
-    height: 60px;
+    max-width: 400px;
     margin-top: 10px;
   }
 
-  /* Slightly smaller subtitle under About Me */
-  #about p {
+  .about-stats .stat {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 0;
+    border-radius: 10px;
+    text-align: center;
     font-size: 0.85rem;
-    opacity: 0.8;
+    color: #f0f0f0;
+    transition: transform 0.3s ease;
+  }
+
+  .about-stats .stat:hover {
+    transform: scale(1.03);
+  }
+
+  /* Adjust the circular icon section (if you have one) */
+  .about-icon {
+    width: 55px;
+    height: 55px;
+    margin-top: 8px;
+  }
+
+  /* Reduce spacing below About section */
+  #about {
+    padding-bottom: 25px;
   }
 
   /* Education Section */

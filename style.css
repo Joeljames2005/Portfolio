@@ -2022,3 +2022,54 @@ a:hover,
   font-size: 56px;
   color: var(--accent, #a855f7);
   filter: drop-shadow(0 6px 18px rgba(var(--accent-rgb,168,85,247), .35));
+
+
+
+
+
+
+  /* 💎 Center the stats on desktop view */
+#about .about-stats {
+  display: flex;
+  justify-content: center;    
+  align-items: center;            
+  gap: 40px;                      
+  margin-top: 25px;               
+  width: 100%;
+  text-align: center;            
+}
+
+/* Style the stat boxes a little cleaner */
+#about .stat {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 25px;
+  border-radius: 10px;
+  min-width: 120px;
+  transition: transform 0.3s ease;
+}
+
+#about .stat:hover {
+  transform: translateY(-4px);
+}
+
+#about .stat-number {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+}
+
+#about .stat-label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* Keep your mobile layout intact */
+@media (max-width: 768px) {
+  #about .about-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    justify-items: center;
+  }
+}
+
